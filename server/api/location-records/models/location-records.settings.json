@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "location_records",
+  "info": {
+    "name": "location_records"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "accuracy": {
+      "type": "float"
+    },
+    "altitude": {
+      "type": "float"
+    },
+    "altitudeAccuracy": {
+      "type": "float"
+    },
+    "heading": {
+      "type": "float"
+    },
+    "latitude": {
+      "type": "float"
+    },
+    "longitude": {
+      "type": "float"
+    },
+    "speed": {
+      "type": "float"
+    },
+    "mocked": {
+      "type": "boolean"
+    },
+    "timestamp": {
+      "type": "datetime"
+    }
+  }
+}

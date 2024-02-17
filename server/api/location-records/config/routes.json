@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/location-records",
+      "handler": "location-records.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/location-records/count",
+      "handler": "location-records.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/location-records/:id",
+      "handler": "location-records.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/location-records",
+      "handler": "location-records.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/location-records/:id",
+      "handler": "location-records.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/location-records/:id",
+      "handler": "location-records.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

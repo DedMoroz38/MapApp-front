@@ -1,11 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { View } from 'react-native';
 import MapView from 'react-native-maps';
-import * as Location from 'expo-location';
-import { io } from 'socket.io-client';
-import { useSocketSetup } from '../hooka/useSocketSetup';
+import { useSocketSetup } from '../hooks/useSocketSetup';
 
-const MyMap = () => {
+const Map = () => {
   useSocketSetup()
 
   return (
@@ -23,4 +21,4 @@ const MyMap = () => {
   );
 };
 
-export default MyMap;
+export default Map;

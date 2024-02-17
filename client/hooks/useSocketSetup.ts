@@ -4,9 +4,9 @@ import { io } from 'socket.io-client';
 
 
 export const useSocketSetup = () => {
-  const socket = io('http://192.168.88.155:4000', { transports: ['websocket'] });
+  const socket = io('http://192.168.1.111:4000', { transports: ['websocket'] });
 
-   useEffect(() => {
+  const startLocationUpdate = () => {
     (async () => {
       let { status } = await Location.requestForegroundPermissionsAsync();
       if (status !== 'granted') {
@@ -26,6 +26,13 @@ export const useSocketSetup = () => {
         }
       );
     })();
+  }
+
+  useEffect(() => {
+    socket.on('connect_error', (error) => {
+      console.error('Connection Error:', error);
+    });
+    startLocationUpdate();
 
     return () => {
       socket.disconnect();
